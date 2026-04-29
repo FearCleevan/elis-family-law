@@ -3,10 +3,10 @@ import { Fragment } from "react";
 import styles from "./Location.module.css";
 
 const offices = [
-  { name: "Durham Office",       address: "3511 Shannon Road Suite 150\nDurham, NC, 27707" },
-  { name: "Cary Office",         address: "201 Shannon Oaks Circle Suite 100\nCary, NC, 27511" },
-  { name: "Wake Forest Office",  address: "1740 Heritage Center Dr. Suite 202\nWake Forest, NC, 27587" },
-  { name: "Pittsboro Office",    address: "27 Hillsboro Street\nPittsboro, NC, 27312" },
+  { name: "Durham Office",       address: "3511 Shannon Road Suite 150\nDurham, NC, 27707",           image: "/images/Durham-Office.jpg" },
+  { name: "Cary Office",         address: "201 Shannon Oaks Circle Suite 100\nCary, NC, 27511",        image: "/images/Cary-Office.jpg" },
+  { name: "Wake Forest Office",  address: "1740 Heritage Center Dr. Suite 202\nWake Forest, NC, 27587", image: "/images/Wake-Forest-Office.jpg" },
+  { name: "Pittsboro Office",    address: "27 Hillsboro Street\nPittsboro, NC, 27312",                 image: "/images/Pittsboro-Office.jpg" },
 ];
 
 export default function Location() {
@@ -32,8 +32,8 @@ export default function Location() {
 
               <div className={styles.mapWrap}>
                 <Image
-                  src="/images/location-image.png"
-                  alt={`${office.name} map`}
+                  src={office.image}
+                  alt={`${office.name} exterior`}
                   width={270}
                   height={150}
                   className={styles.mapImg}
