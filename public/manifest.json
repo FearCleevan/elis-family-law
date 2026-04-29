@@ -1,0 +1,21 @@
+{
+  "name": "Elis Family Law",
+  "short_name": "Elis Family Law",
+  "description": "Board-certified family law specialists in Durham, Raleigh, Cary, and throughout North Carolina.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#16191F",
+  "theme_color": "#16191F",
+  "icons": [
+    {
+      "src": "/images/deer-logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/deer-logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

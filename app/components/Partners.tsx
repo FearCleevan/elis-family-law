@@ -1,18 +1,23 @@
+"use client";
+
 import Image from "next/image";
 import styles from "./Partners.module.css";
+import { useInView } from "../hooks/useInView";
 
 const partners = [
-  { name: "Deer Designer",       role: "Managing Partner", image: "/team/deer-designer.png" },
-  { name: "Amanda C. Knight",    role: "Partner",          image: "/team/amanda-knight.png" },
-  { name: "Autumn D. Osbourne",  role: "Partner",          image: "/team/autumn-osbourne.png" },
+  { name: "Deer Designer",      role: "Managing Partner", image: "/team/deer-designer.png" },
+  { name: "Amanda C. Knight",   role: "Partner",          image: "/team/amanda-knight.png" },
+  { name: "Autumn D. Osbourne", role: "Partner",          image: "/team/autumn-osbourne.png" },
 ];
 
 export default function Partners() {
+  const { ref, inView } = useInView(0.1);
+
   return (
-    <section className={styles.section}>
+    <section ref={ref} className={styles.section}>
       <div className={styles.frame}>
 
-        <div className={styles.header}>
+        <div className={`${styles.header} ${inView ? styles.headerVisible : ""}`}>
           <h2 className={styles.heading}>
             <em>Meet Our Partners</em>
           </h2>
@@ -25,7 +30,10 @@ export default function Partners() {
 
         <div className={styles.cards}>
           {partners.map((p) => (
-            <div key={p.name} className={styles.card}>
+            <div
+              key={p.name}
+              className={`${styles.card} ${inView ? styles.cardVisible : ""}`}
+            >
               <Image src={p.image} alt={p.name} fill className={styles.cardImg} />
               <div className={styles.cardOverlay} />
               <div className={styles.cardContent}>

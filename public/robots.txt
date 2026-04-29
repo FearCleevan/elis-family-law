@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://elisfamilylaw.vercel.app/sitemap.xml

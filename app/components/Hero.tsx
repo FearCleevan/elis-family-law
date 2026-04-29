@@ -9,6 +9,8 @@ export default function Hero() {
         alt="Family walking in nature"
         fill
         priority
+        sizes="100vw"
+        quality={85}
         className={styles.heroBg}
       />
 

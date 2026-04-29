@@ -61,6 +61,12 @@
   padding: 7px 20px 17px 24px;
   box-sizing: border-box;
   flex-shrink: 0;
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.step:hover .circle {
+  box-shadow: 0 0 0 6px rgba(196, 158, 120, 0.15);
+  border-color: rgba(196, 158, 120, 0.9);
 }
 
 .circleNum {
@@ -136,7 +142,7 @@
   background-color: #c49e78;
   white-space: nowrap;
   box-sizing: border-box;
-  transition: opacity 0.2s;
+  transition: opacity 0.2s, gap 0.2s;
   flex-shrink: 0;
 }
 
@@ -146,6 +152,7 @@
 
 .btn:hover {
   opacity: 0.88;
+  gap: 16px;
 }
 
 /* ════════════════════════════════════

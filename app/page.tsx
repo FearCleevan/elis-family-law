@@ -18,11 +18,11 @@ const jsonLd = {
   name: "Elis Family Law",
   description:
     "Board-certified family law specialists providing divorce, child custody, alimony, and estate planning services in Durham, Raleigh, Cary, and throughout North Carolina.",
-  url: "http://elisfamilylaw.vercel.app",
+  url: "https://elisfamilylaw.vercel.app",
   telephone: "+1-919-626-9148",
   email: "info@elisfamilylaw.com",
-  image: "http://elisfamilylaw.vercel.app/images/logo.png",
-  logo: "http://elisfamilylaw.vercel.app/images/logo.png",
+  image: "https://elisfamilylaw.vercel.app/images/logo.png",
+  logo: "https://elisfamilylaw.vercel.app/images/logo.png",
   priceRange: "$$$",
   foundingDate: "2010",
   foundingLocation: {
@@ -211,6 +211,7 @@ export default function Home() {
       <div className={styles.wrapper}>
         <TopBar />
         <Header />
+        <main id="main-content">
         <div id="hero">
           <Hero />
         </div>
@@ -235,6 +236,7 @@ export default function Home() {
         <div id="contact">
           <Location />
         </div>
+        </main>
         <Footer />
       </div>
     </>

@@ -22,3 +22,44 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+/* ── Visually-hidden utility (screen readers only) ── */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* ── Skip-to-main-content link ── */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  z-index: 9999;
+}
+
+.skip-link:focus {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  width: auto;
+  height: auto;
+  padding: 10px 22px;
+  background-color: #c49e78;
+  color: #16191f;
+  overflow: visible;
+  outline: 3px solid #16191f;
+  outline-offset: 2px;
+}

@@ -24,13 +24,16 @@ const aboreto = Aboreto({
   weight: "400",
 });
 
+const BASE_URL = "https://elisfamilylaw.vercel.app";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("http://elisfamilylaw.vercel.app"),
+  metadataBase: new URL(BASE_URL),
   title: {
     default: "Elis Family Law | Board-Certified Family Law Specialists in Durham, NC",
     template: "%s | Elis Family Law",
   },
-  description: "Elis Family Law provides expert family law representation in Durham, Raleigh, Cary, and throughout North Carolina. Led by board-certified specialists in divorce, child custody, alimony, and estate planning.",
+  description:
+    "Elis Family Law provides expert family law representation in Durham, Raleigh, Cary, and throughout North Carolina. Led by board-certified specialists in divorce, child custody, alimony, and estate planning.",
   keywords: [
     "family law",
     "divorce attorney",
@@ -48,53 +51,49 @@ export const metadata: Metadata = {
     "Cary family law",
     "Triangle divorce attorney",
   ],
-  authors: [{ name: "Elis Family Law, P.L.L.C." }],
-  creator: "Elis Family Law",
+  authors:   [{ name: "Elis Family Law, P.L.L.C." }],
+  creator:   "Elis Family Law",
   publisher: "Elis Family Law, P.L.L.C.",
   formatDetection: {
-    email: false,
-    address: true,
+    email:     false,
+    address:   true,
     telephone: true,
   },
   openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: "http://elisfamilylaw.vercel.app",
-    siteName: "Elis Family Law",
-    title: "Elis Family Law | Board-Certified Family Law Specialists in Durham, NC",
+    type:        "website",
+    locale:      "en_US",
+    url:         BASE_URL,
+    siteName:    "Elis Family Law",
+    title:       "Elis Family Law | Board-Certified Family Law Specialists in Durham, NC",
     description: "Expert family law representation in Durham, Raleigh, Cary, and throughout North Carolina. Led by board-certified specialists.",
     images: [
       {
-        url: "/images/og-image.png",
-        width: 1200,
+        url:    "/images/hero-bg.png",
+        width:  1200,
         height: 630,
-        alt: "Elis Family Law - Your Future Starts Here",
+        alt:    "Elis Family Law — Your Future Starts Here",
       },
     ],
   },
   twitter: {
-    card: "summary_large_image",
-    title: "Elis Family Law | Board-Certified Family Law Specialists in Durham, NC",
+    card:        "summary_large_image",
+    title:       "Elis Family Law | Board-Certified Family Law Specialists in Durham, NC",
     description: "Expert family law representation in Durham, Raleigh, Cary, and throughout North Carolina. Board-certified specialists.",
-    images: ["/images/og-image.png"],
-    creator: "@elisfamilylaw",
+    images:      ["/images/hero-bg.png"],
   },
   robots: {
-    index: true,
+    index:  true,
     follow: true,
     googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
+      index:                true,
+      follow:               true,
+      "max-video-preview":  -1,
+      "max-image-preview":  "large",
+      "max-snippet":        -1,
     },
   },
-  verification: {
-    google: "YOUR_GOOGLE_VERIFICATION_CODE",
-  },
   alternates: {
-    canonical: "http://elisfamilylaw.vercel.app",
+    canonical: BASE_URL,
   },
 };
 
@@ -109,24 +108,23 @@ export default function RootLayout({
       className={`${cormorant.variable} ${montserrat.variable} ${aboreto.variable}`}
     >
       <head>
-        {/* Primary favicon */}
-        <link rel="icon" type="image/png" sizes="32x32" href="/images/deer-logo.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/images/deer-logo.png" />
-        
-        {/* Apple devices */}
-        <link rel="apple-touch-icon" sizes="180x180" href="/images/deer-logo.png" />
-        
-        {/* Microsoft tiles */}
+        {/* Favicons */}
+        <link rel="icon"             type="image/png" sizes="32x32"  href="/images/deer-logo.png" />
+        <link rel="icon"             type="image/png" sizes="16x16"  href="/images/deer-logo.png" />
+        <link rel="apple-touch-icon" sizes="180x180"                 href="/images/deer-logo.png" />
+
+        {/* Microsoft */}
         <meta name="msapplication-TileImage" content="/images/deer-logo.png" />
         <meta name="msapplication-TileColor" content="#16191F" />
-        
-        {/* PWA manifest */}
+
+        {/* PWA */}
         <link rel="manifest" href="/manifest.json" />
-        
-        {/* Theme color */}
         <meta name="theme-color" content="#16191F" />
       </head>
-      <body className="min-h-full flex flex-col bg-[#16191F]">{children}</body>
+      <body className="min-h-full flex flex-col bg-[#16191F]">
+        <a href="#main-content" className="skip-link">Skip to main content</a>
+        {children}
+      </body>
     </html>
   );
 }
