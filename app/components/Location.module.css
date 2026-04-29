@@ -1,0 +1,181 @@
+.section {
+  width: 100%;
+  height: 437px;
+  background-color: #16191F;
+  padding: 60px 98px 60px 100px;
+  border-top: 1px solid rgba(196, 158, 120, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+/* ── Inner frame ── */
+.frame {
+  width: 1242px;
+  height: 317px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 27px;
+}
+
+/* ── Vertical divider ── */
+.divider {
+  width: 1px;
+  height: 317px;
+  border-left: 1px solid rgba(255, 247, 240, 0.1);
+  flex-shrink: 0;
+  align-self: stretch;
+}
+
+/* ── Single location column ── */
+.location {
+  width: 270px;
+  height: 317px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 11px;
+  flex-shrink: 0;
+}
+
+/* ── Pin icon ── */
+.icon {
+  flex-shrink: 0;
+}
+
+/* ── Title + address block ── */
+.textBlock {
+  width: 270px;
+  height: 86px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.title {
+  font-family: var(--font-aboreto), sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 26.28px;
+  letter-spacing: 0px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fffefc;
+  margin: 0;
+  width: 270px;
+}
+
+.address {
+  font-family: var(--font-cormorant), serif;
+  font-size: 18.77px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 27.46px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #fffefc;
+  margin: 0;
+  width: 270px;
+}
+
+/* ── Map image ── */
+.mapWrap {
+  width: 270px;
+  height: 150px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.mapImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ════════════════════════════════════
+   Tablet  768px – 1023px
+   ════════════════════════════════════ */
+@media (max-width: 1023px) {
+  .section {
+    height: auto;
+    padding: 48px 40px;
+  }
+
+  .frame {
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .location {
+    width: calc(50% - 16px);
+    height: auto;
+  }
+
+  .textBlock {
+    width: 100%;
+    height: auto;
+  }
+
+  .title,
+  .address {
+    width: 100%;
+  }
+
+  .mapWrap {
+    width: 100%;
+  }
+}
+
+/* ════════════════════════════════════
+   Mobile  ≤ 767px
+   ════════════════════════════════════ */
+@media (max-width: 767px) {
+  .section {
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .frame {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .location {
+    width: 100%;
+    height: auto;
+  }
+
+  .textBlock {
+    width: 100%;
+    height: auto;
+  }
+
+  .title,
+  .address {
+    width: 100%;
+  }
+
+  .mapWrap {
+    width: 100%;
+    height: 160px;
+  }
+}

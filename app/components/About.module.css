@@ -1,0 +1,251 @@
+.section {
+  width: 100%;
+  background-color: #FFF7F0;
+  padding: 80px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.frame {
+  width: 1240px;
+  height: 258px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 150px;
+}
+
+/* ══════════════════
+   LEFT COLUMN
+══════════════════ */
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.label {
+  font-family: var(--font-aboreto), sans-serif;
+  font-size: 15.02px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 18.77px;
+  letter-spacing: 2.63px;
+  text-transform: uppercase;
+  color: #8a7e74;
+  margin: 0 0 18px 0;
+}
+
+.heading {
+  font-family: var(--font-cormorant), serif;
+  font-size: 45.06px;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 56.32px;
+  letter-spacing: 0px;
+  color: #2b1f1a;
+  margin: 0 0 28px 0;
+}
+
+.headingGold {
+  color: #c49e78;
+  font-style: normal;
+}
+
+.bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.bulletItem {
+  font-family: var(--font-cormorant), serif;
+  font-size: 18.77px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 27.46px;
+  letter-spacing: 0px;
+  color: #2b1f1a;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.bulletDot {
+  color: #c49e78;
+  flex-shrink: 0;
+  margin-top: 2px;
+  font-size: 16px;
+}
+
+.note {
+  font-family: var(--font-cormorant), serif;
+  font-size: 18.77px;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 27.46px;
+  letter-spacing: 0px;
+  color: #2b1f1a;
+  margin: 0;
+}
+
+/* ══════════════════
+   RIGHT COLUMN
+══════════════════ */
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 475px;
+}
+
+.input {
+  width: 475px;
+  height: 52px;
+  background-color: #ffffff;
+  border: 1px solid rgba(196, 158, 120, 0.3);
+  padding: 0 20px;
+  font-family: var(--font-cormorant), serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  color: #2b1f1a;
+  outline: none;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.input::placeholder {
+  color: #b0a8a2;
+  font-style: normal;
+}
+
+.input:focus {
+  border-color: rgba(196, 158, 120, 0.7);
+}
+
+.submitBtn {
+  width: 475px;
+  height: 54px;
+  background-color: #c49e78;
+  border: none;
+  cursor: pointer;
+  padding: 17px 27px;
+  font-family: var(--font-aboreto), sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 20px;
+  letter-spacing: 1.4px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #2b1f1a;
+  transition: opacity 0.2s;
+  box-sizing: border-box;
+}
+
+.submitBtn:hover {
+  opacity: 0.88;
+}
+
+/* ════════════════════════════════════
+   Tablet  768px – 1023px
+   Side-by-side but widths go fluid
+   ════════════════════════════════════ */
+@media (max-width: 1023px) {
+  .section {
+    padding: 60px 40px;
+  }
+
+  .frame {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    gap: 40px;
+    align-items: stretch;
+  }
+
+  .heading {
+    font-size: 34px;
+    line-height: 44px;
+    margin-bottom: 20px;
+  }
+
+  .label {
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+  }
+
+  .bulletItem {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .note {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .right {
+    width: 100%;
+  }
+
+  .input,
+  .submitBtn {
+    width: 100%;
+  }
+}
+
+/* ════════════════════════════════════
+   Mobile  ≤ 767px
+   Stacks to single column
+   ════════════════════════════════════ */
+@media (max-width: 767px) {
+  .section {
+    padding: 48px 20px;
+  }
+
+  .frame {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    gap: 36px;
+  }
+
+  .label {
+    font-size: 12px;
+    letter-spacing: 1.8px;
+    margin-bottom: 12px;
+  }
+
+  .heading {
+    font-size: 28px;
+    line-height: 36px;
+    margin-bottom: 16px;
+  }
+
+  .bulletItem {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .note {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .right {
+    width: 100%;
+  }
+
+  .input,
+  .submitBtn {
+    width: 100%;
+  }
+}

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Montserrat } from "next/font/google";
+import { Cormorant_Garamond, Montserrat, Aboreto } from "next/font/google";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -15,6 +15,12 @@ const montserrat = Montserrat({
   weight: ["300", "400", "500", "600", "700"],
 });
 
+const aboreto = Aboreto({
+  variable: "--font-aboreto",
+  subsets: ["latin"],
+  weight: "400",
+});
+
 export const metadata: Metadata = {
   title: "Elis Family Law",
   description: "Divorce & Family Law Attorneys",
@@ -26,7 +32,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${montserrat.variable}`}>
+    <html lang="en" className={`${cormorant.variable} ${montserrat.variable} ${aboreto.variable}`}>
       <body className="min-h-full flex flex-col bg-[#16191F]">{children}</body>
     </html>
   );

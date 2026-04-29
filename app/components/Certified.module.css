@@ -1,0 +1,208 @@
+.section {
+  width: 100%;
+  background-color: #FFF7F0;
+  padding: 90px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ── Whole frame: 1240px, 165px gap ── */
+.frame {
+  width: 1240px;
+  display: flex;
+  align-items: center;
+  gap: 165px;
+}
+
+/* ── Left: Badge ── */
+.badgeWrap {
+  width: 410px;
+  height: 410px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge {
+  width: 410px;
+  height: 410px;
+  object-fit: contain;
+}
+
+/* ── Right: Content ── */
+.content {
+  width: 665px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  flex-shrink: 0;
+}
+
+.heading {
+  font-family: var(--font-cormorant), serif;
+  font-size: 45.06px;
+  font-weight: 400;
+  line-height: 56.32px;
+  letter-spacing: 0px;
+  color: #2b1f1a;
+  margin: 0;
+}
+
+.headingItalic {
+  font-style: italic;
+  display: block;
+}
+
+.headingGold {
+  font-style: normal;
+  color: #c49e78;
+  display: block;
+}
+
+.body {
+  font-family: var(--font-cormorant), serif;
+  font-size: 18.77px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 27.46px;
+  letter-spacing: 0px;
+  color: #2b1f1a;
+  margin: 0;
+}
+
+.btn {
+  width: 665px;
+  height: 54px;
+  background-color: #c49e78;
+  border: none;
+  cursor: pointer;
+  padding: 17px 27px;
+  font-family: var(--font-aboreto), sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 20px;
+  letter-spacing: 1.4px;
+  text-align: left;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #2b1f1a;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  transition: opacity 0.2s;
+  flex-shrink: 0;
+}
+
+.btn:hover {
+  opacity: 0.88;
+}
+
+.btnArrow {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* ════════════════════════════
+   Tablet  768px – 1023px
+   ════════════════════════════ */
+@media (max-width: 1023px) {
+  .section {
+    padding: 60px 40px;
+  }
+
+  .frame {
+    width: 100%;
+    gap: 48px;
+  }
+
+  .badgeWrap {
+    width: 260px;
+    height: 260px;
+    flex-shrink: 0;
+  }
+
+  .badge {
+    width: 260px;
+    height: 260px;
+  }
+
+  .content {
+    width: auto;
+    flex: 1;
+    gap: 20px;
+  }
+
+  .heading {
+    font-size: 34px;
+    line-height: 44px;
+  }
+
+  .body {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .btn {
+    width: 100%;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+}
+
+/* ════════════════════════════
+   Mobile  ≤ 767px
+   ════════════════════════════ */
+@media (max-width: 767px) {
+  .section {
+    padding: 48px 20px;
+  }
+
+  .frame {
+    width: 100%;
+    flex-direction: column;
+    gap: 36px;
+    align-items: center;
+  }
+
+  .badgeWrap {
+    width: 220px;
+    height: 220px;
+  }
+
+  .badge {
+    width: 220px;
+    height: 220px;
+  }
+
+  .content {
+    width: 100%;
+    gap: 16px;
+  }
+
+  .heading {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .body {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .btn {
+    width: 100%;
+    height: auto;
+    font-size: 11px;
+    letter-spacing: 0.8px;
+    padding: 16px 20px;
+    white-space: normal;
+    line-height: 1.5;
+  }
+}

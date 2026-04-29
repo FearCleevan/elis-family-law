@@ -1,0 +1,364 @@
+.section {
+  width: 100%;
+  height: 994px;
+  background-color: #12161e;
+  padding: 90px 100px 91px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.frame {
+  width: 1240px;
+  height: 812.3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+  padding-bottom: 30px;
+}
+
+/* ── Label + Heading block ── */
+.titleBlock {
+  width: 100%;
+  max-width: 1201.56px;
+  height: 79px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+
+/* ── Label ── */
+.label {
+  font-family: var(--font-aboreto), sans-serif;
+  font-size: 15.02px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 18.77px;
+  letter-spacing: 2.63px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #c49e78;
+  margin: 0;
+}
+
+/* ── Heading ── */
+.heading {
+  font-family: var(--font-cormorant), serif;
+  font-size: 56.32px;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 56.32px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #fff7f0;
+  margin: 0;
+}
+
+/* ── Tabs ── */
+.tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  width: 100%;
+  max-width: 710px;
+  height: auto;
+}
+
+.chip {
+  height: 32px;
+  padding: 3px 33px;
+  border-radius: 23px;
+  border: 1.5px solid #c49e78;
+  background: transparent;
+  font-family: var(--font-aboreto), sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #c49e78;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.2s, color 0.2s;
+  box-sizing: border-box;
+}
+
+.chipActive {
+  background-color: #c49e78;
+  color: #16191f;
+}
+
+/* ── Cards ── */
+.cards {
+  display: flex;
+  align-items: flex-start;
+  gap: 50px;
+}
+
+.card {
+  width: 595px;
+  min-height: 436px;
+  border-radius: 13.14px;
+  border-top: 0.94px solid rgba(196, 158, 120, 0.1);
+  background-color: rgba(255, 247, 240, 0.03);
+  padding: 35px 41px 29px 41px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  box-sizing: border-box;
+}
+
+/* ── Quote icon ── */
+.quoteIcon {
+  opacity: 0.6;
+  flex-shrink: 0;
+}
+
+/* ── Quote text ── */
+.quote {
+  font-family: var(--font-cormorant), serif;
+  font-size: 26px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #fff7f0;
+  margin: 0;
+  width: 512px;
+}
+
+/* ── Profile ── */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 15.02px;
+  width: 170px;
+  margin-top: auto;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1.88px solid rgba(196, 158, 120, 0.4);
+  background-color: #1e2330;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.avatarInitials {
+  font-family: var(--font-aboreto), sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #c49e78;
+  letter-spacing: 1px;
+}
+
+.profileInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.profileName {
+  font-family: var(--font-aboreto), sans-serif;
+  font-size: 16.9px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 26.28px;
+  letter-spacing: 0px;
+  color: #c49e78;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.profileRole {
+  font-family: var(--font-cormorant), serif;
+  font-size: 16.9px;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 26.28px;
+  letter-spacing: 0px;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* ── Pagination ── */
+/* Adjust --cards-pagination-gap to change the space between cards and dots */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7.51px;
+  margin-top: calc(30px - 64px); /* 20px gap from cards; change 20px to tune */
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  border: none;
+  background-color: rgba(196, 158, 120, 0.3);
+  cursor: pointer;
+  padding: 0;
+  transition: background-color 0.2s, width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  flex-shrink: 0;
+}
+
+.dotActive {
+  width: 28px;
+  background-color: #c49e78;
+}
+
+/* ── CTA Button ── */
+.btn {
+  width: 327px;
+  height: 54px;
+  padding: 17px 27px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font-family: var(--font-aboreto), sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 20px;
+  letter-spacing: 1.31px;
+  text-transform: uppercase;
+  color: #16191f;
+  text-decoration: none;
+  background-color: #c49e78;
+  border: none;
+  white-space: nowrap;
+  box-sizing: border-box;
+  transition: opacity 0.2s;
+  flex-shrink: 0;
+}
+
+.btn:hover {
+  opacity: 0.88;
+}
+
+.btnArrow {
+  flex-shrink: 0;
+}
+
+/* ════════════════════════════════════
+   Tablet  768px – 1023px
+   ════════════════════════════════════ */
+@media (max-width: 1023px) {
+  .section {
+    height: auto;
+    padding: 60px 40px;
+  }
+
+  .frame {
+    width: 100%;
+    height: auto;
+    gap: 40px;
+  }
+
+  .heading {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .tabs {
+    width: 100%;
+    flex-wrap: wrap;
+    height: auto;
+    justify-content: center;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+  }
+
+  .card {
+    width: 100%;
+    min-height: auto;
+  }
+
+  .quote {
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 327px;
+  }
+}
+
+/* ════════════════════════════════════
+   Mobile  ≤ 767px
+   ════════════════════════════════════ */
+@media (max-width: 767px) {
+  .section {
+    height: auto;
+    padding: 48px 20px;
+  }
+
+  .frame {
+    width: 100%;
+    height: auto;
+    gap: 32px;
+  }
+
+  .heading {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .tabs {
+    width: 100%;
+    flex-wrap: wrap;
+    height: auto;
+    gap: 10px;
+  }
+
+  .pagination {
+    margin-top: -10px;
+  }
+
+  .chip {
+    padding: 6px 20px;
+    font-size: 11px;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .card {
+    width: 100%;
+    min-height: auto;
+    padding: 24px 20px;
+  }
+
+  .quote {
+    width: 100%;
+    font-size: 20px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

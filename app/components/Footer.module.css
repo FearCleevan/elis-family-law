@@ -1,0 +1,267 @@
+.footer {
+  width: 100%;
+  height: 492.39px;
+  background-color: #16191f;
+  border-top: 1px solid rgba(196, 158, 120, 0.2);
+  padding: 65px 100px 50px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+/* ── Inner frame ── */
+.frame {
+  width: 1240px;
+  height: 377px;
+  display: flex;
+  flex-direction: column;
+  gap: 65px;
+}
+
+/* ── Top row ── */
+.topRow {
+  width: 1240px;
+  height: 260px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 280px;
+}
+
+/* ── Brand (logo + socials) ── */
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  flex-shrink: 0;
+}
+
+.logo {
+  object-fit: contain;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.socialIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.socialIcon:hover {
+  opacity: 1;
+}
+
+/* ── Nav columns ── */
+.navColumns {
+  width: 769px;
+  height: 260px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 80px;
+  flex-shrink: 0;
+}
+
+.navCol {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 203px;
+}
+
+.colTitle {
+  font-family: var(--font-aboreto), sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 20px;
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+  color: #c49e78;
+  margin: 0 0 8px 0;
+}
+
+.colList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.colLink {
+  font-family: var(--font-aboreto), sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  color: rgba(255, 247, 240, 0.6);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s;
+}
+
+.colLink:hover {
+  color: #c49e78;
+}
+
+/* ── Bottom bar ── */
+.bottomBar {
+  width: 1240px;
+  height: 52px;
+  border-top: 1px solid rgba(196, 158, 120, 0.2);
+  padding-top: 16px;
+  padding-bottom: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.bottomLeft {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.bottomLink {
+  font-family: var(--font-aboreto), sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  color: rgba(255, 247, 240, 0.6);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s;
+}
+
+.bottomLink:hover {
+  color: #c49e78;
+}
+
+.bottomCenter {
+  font-family: var(--font-aboreto), sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  color: rgba(255, 247, 240, 0.6);
+  margin: 0;
+  white-space: nowrap;
+}
+
+.bottomRight {
+  font-family: var(--font-aboreto), sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  color: rgba(255, 247, 240, 0.6);
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* ════════════════════════════════════
+   Tablet  768px – 1023px
+   ════════════════════════════════════ */
+@media (max-width: 1023px) {
+  .footer {
+    height: auto;
+    padding: 48px 40px 40px 40px;
+  }
+
+  .frame {
+    width: 100%;
+    height: auto;
+    gap: 40px;
+  }
+
+  .topRow {
+    width: 100%;
+    height: auto;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .navColumns {
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  .bottomBar {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 8px;
+    height: auto;
+  }
+}
+
+/* ════════════════════════════════════
+   Mobile  ≤ 767px
+   ════════════════════════════════════ */
+@media (max-width: 767px) {
+  .footer {
+    height: auto;
+    padding: 40px 20px 32px 20px;
+  }
+
+  .frame {
+    width: 100%;
+    height: auto;
+    gap: 32px;
+  }
+
+  .topRow {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .navColumns {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .navCol {
+    width: 100%;
+  }
+
+  .bottomBar {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    height: auto;
+  }
+
+  .bottomCenter,
+  .bottomRight {
+    text-align: left;
+  }
+}

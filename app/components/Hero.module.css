@@ -1,0 +1,291 @@
+.hero {
+  width: 100%;
+  height: 693px;
+  background-color: #16191f;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Background photo */
+.heroBg {
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  object-position: center top;
+  z-index: 0;
+}
+
+/* Gradient overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(22, 25, 31, 0.75) 0%,
+    rgba(22, 25, 31, 0.45) 50%,
+    #16191f 100%
+  );
+  z-index: 1;
+}
+
+/* Vector decorations */
+.vectorImg {
+  object-fit: contain;
+}
+
+.vectorLeft {
+  position: absolute;
+  width: 700px;
+  height: 690px;
+  top: -2px;
+  left: -250px;
+  transform: rotate(-1deg);
+  opacity: 1;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.vectorRight {
+  position: absolute;
+  width: 700px;
+  height: 690px;
+  top: 1px;
+  right: -282px;
+  transform: rotate(-1deg);
+  opacity: 1;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Frosted glass card */
+.card {
+  position: relative;
+  z-index: 3;
+  width: 870px;
+  height: 391px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.071);
+  border-top: 1px solid rgba(255, 255, 255, 0.102);
+  box-shadow: 0px 25px 50px -12px rgba(0, 0, 0, 0.25);
+  padding: 49px 47px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0;
+}
+
+.heading {
+  font-family: var(--font-cormorant), serif;
+  font-size: 72px;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 79.2px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #ffffff;
+  margin: 0 0 16px 0;
+}
+
+/* "Your Future" — italic (inherits from .heading) */
+.headingItalic {
+  font-style: italic;
+}
+
+/* "Starts Here" — upright + gold */
+.headingGold {
+  font-style: normal;
+  color: #c49e78;
+}
+
+.subtext {
+  font-family: var(--font-cormorant), serif;
+  font-size: 20px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 29.25px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0 0 8px 0;
+  max-width: 600px;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 8px 0 24px;
+}
+
+.dividerStar {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+  color: rgba(196, 158, 120, 0.7);
+}
+
+.dividerLabel {
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: rgba(196, 158, 120, 0.7);
+  text-transform: uppercase;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.btnPrimary {
+  font-family: var(--font-aboreto), sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 20px;
+  letter-spacing: 1.4px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #16191f;
+  background-color: #c49e78;
+  padding: 13px 28px;
+  text-decoration: none;
+  transition: opacity 0.2s;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btnArrow {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.btnPrimary:hover {
+  opacity: 0.85;
+}
+
+.btnOutline {
+  font-family: var(--font-aboreto), sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 20px;
+  letter-spacing: 1.4px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  padding: 12px 28px;
+  text-decoration: none;
+  background-color: transparent;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+  white-space: nowrap;
+}
+
+.btnOutline:hover {
+  background-color: #ffffff;
+  color: #16191f;
+  border-color: #ffffff;
+}
+
+/* ════════════════════════════════════════
+   Tablet  768px – 1023px
+   ════════════════════════════════════════ */
+@media (max-width: 1023px) {
+  .hero {
+    height: auto;
+    min-height: 560px;
+    padding: 60px 0;
+  }
+
+  /* Vectors disabled on tablet — positions/sizes untouched */
+  .vectorLeft,
+  .vectorRight {
+    display: none;
+  }
+
+  .card {
+    width: min(680px, calc(100% - 64px));
+    height: auto;
+    min-height: unset;
+    padding: 40px 36px;
+  }
+
+  .heading {
+    font-size: 48px;
+  }
+
+  .subtext {
+    font-size: 12px;
+    max-width: 440px;
+  }
+}
+
+/* ════════════════════════════════════════
+   Mobile  ≤ 767px
+   ════════════════════════════════════════ */
+@media (max-width: 767px) {
+  .hero {
+    height: auto;
+    min-height: 520px;
+    padding: 48px 0;
+  }
+
+  /* Vectors disabled on mobile — positions/sizes untouched */
+  .vectorLeft,
+  .vectorRight {
+    display: none;
+  }
+
+  .card {
+    width: calc(100% - 32px);
+    height: auto;
+    min-height: unset;
+    padding: 36px 24px;
+    border-radius: 12px;
+  }
+
+  .heading {
+    font-size: 36px;
+    margin-bottom: 12px;
+  }
+
+  .subtext {
+    font-size: 12px;
+    max-width: 100%;
+    line-height: 1.7;
+  }
+
+  .divider {
+    margin: 6px 0 18px;
+  }
+
+  .dividerLabel {
+    font-size: 8px;
+    letter-spacing: 0.1em;
+  }
+
+  /* Stack buttons vertically */
+  .buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .btnPrimary,
+  .btnOutline {
+    width: 100%;
+    text-align: center;
+    padding: 14px 20px;
+  }
+}
