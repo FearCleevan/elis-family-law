@@ -122,7 +122,6 @@ export default function RootLayout({
         <meta name="theme-color" content="#16191F" />
       </head>
       <body className="min-h-full flex flex-col bg-[#16191F]">
-        <a href="#main-content" className="skip-link">Skip to main content</a>
         {children}
       </body>
     </html>

@@ -2,15 +2,15 @@ import styles from "./LegalGuidance.module.css";
 import Image from "next/image";
 
 const cards = [
-  { icon: "/legal/divorce-separation.png",    title: "Divorce & Separation",     body: "Steady, strategic guidance through divorce, with a focus on protecting your future at every stage.",                                              href: "#legal-guidance" },
-  { icon: "/legal/high-asset-divorce.png",    title: "High-Asset Divorce",        body: "Sophisticated representation for divorces involving substantial assets, complex portfolios, or long-term financial interests.",                    href: "#legal-guidance" },
-  { icon: "/legal/child-custody.png",         title: "Child Custody",             body: "Thoughtful advocacy for parenting arrangements that protect your children's wellbeing and your future role.",                                      href: "#legal-guidance" },
-  { icon: "/legal/child-support.png",         title: "Child Support",             body: "Clear, informed guidance on establishing, modifying, and enforcing child support with care and precision.",                                        href: "#legal-guidance" },
-  { icon: "/legal/property-division.png",     title: "Property Division",         body: "Strategic counsel for dividing assets and debts in a way that safeguards your financial future.",                                                  href: "#legal-guidance" },
-  { icon: "/legal/spousal-support.png",       title: "Spousal Support",           body: "Experienced representation in alimony matters involving lifestyle, earning capacity, and long-term stability.",                                    href: "#legal-guidance" },
-  { icon: "/legal/prenuptial-agreements.png", title: "Prenuptial Agreements",     body: "Carefully crafted agreements designed to protect assets, clarify expectations, and support peace of mind.",                                        href: "#legal-guidance" },
-  { icon: "/legal/estate-planning.png",       title: "Estate Planning",           body: "Personalized estate planning services to help you protect your wishes, your assets, and the people you love.",                                    href: "#legal-guidance" },
-  { icon: "/legal/domestic-violence.png",     title: "Domestic Violence",         body: "Compassionate, decisive legal support focused on your safety, stability, and next steps with care.",                                              href: "#legal-guidance" },
+  { icon: "/legal/divorce-separation.png", title: "Divorce & Separation", body: "Steady, strategic guidance through divorce, with a focus on protecting your future at every stage.", href: "#legal-guidance" },
+  { icon: "/legal/high-asset-divorce.png", title: "High-Asset Divorce", body: "Sophisticated representation for divorces involving substantial assets, complex portfolios, or long-term financial interests.", href: "#legal-guidance" },
+  { icon: "/legal/child-custody.png", title: "Child Custody", body: "Thoughtful advocacy for parenting arrangements that protect your children's wellbeing and your future role.", href: "#legal-guidance" },
+  { icon: "/legal/child-support.png", title: "Child Support", body: "Clear, informed guidance on establishing, modifying, and enforcing child support with care and precision.", href: "#legal-guidance" },
+  { icon: "/legal/property-division.png", title: "Property Division", body: "Strategic counsel for dividing assets and debts in a way that safeguards your financial future.", href: "#legal-guidance" },
+  { icon: "/legal/spousal-support.png", title: "Spousal Support", body: "Experienced representation in alimony matters involving lifestyle, earning capacity, and long-term stability.", href: "#legal-guidance" },
+  { icon: "/legal/prenuptial-agreements.png", title: "Prenuptial Agreements", body: "Carefully crafted agreements designed to protect assets, clarify expectations, and support peace of mind.", href: "#legal-guidance" },
+  { icon: "/legal/estate-planning.png", title: "Estate Planning", body: "Personalized estate planning services to help you protect your wishes, your assets, and the people you love.", href: "#legal-guidance" },
+  { icon: "/legal/domestic-violence.png", title: "Domestic Violence", body: "Compassionate, decisive legal support focused on your safety, stability, and next steps with care.", href: "#legal-guidance" },
 ];
 
 export default function LegalGuidance() {
@@ -26,7 +26,14 @@ export default function LegalGuidance() {
       <div className={styles.grid}>
         {cards.map((card) => (
           <div key={card.title} className={styles.card}>
-            <Image src={card.icon} alt={card.title} width={56} height={40} className={styles.icon} />
+            <Image
+              src={card.icon}
+              alt={card.title}
+              width={56}
+              height={40}
+              className={styles.icon}
+              style={{ width: 'auto', height: '40px' }}
+            />
             <h3 className={styles.cardTitle}>{card.title}</h3>
             <p className={styles.cardBody}>{card.body}</p>
             <a href={card.href} className={styles.learnMore} aria-label={`Learn more about ${card.title}`}>

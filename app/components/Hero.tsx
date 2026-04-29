@@ -17,11 +17,23 @@ export default function Hero() {
       <div className={styles.overlay} />
 
       <div className={styles.vectorLeft}>
-        <Image src="/images/vector-left.png" alt="" fill className={styles.vectorImg} />
+        <Image
+          src="/images/vector-left.png"
+          alt=""
+          fill
+          sizes="(max-width: 1023px) 0px, 700px"  // Add this
+          className={styles.vectorImg}
+        />
       </div>
 
       <div className={styles.vectorRight}>
-        <Image src="/images/vector-right.png" alt="" fill className={styles.vectorImg} />
+        <Image
+          src="/images/vector-right.png"
+          alt=""
+          fill
+          sizes="(max-width: 1023px) 0px, 700px"  // Add this
+          className={styles.vectorImg}
+        />
       </div>
 
       <div className={styles.card}>
